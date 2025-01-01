@@ -145,7 +145,7 @@ static const Key keys[] = {
     {0, 0x1008ff03, spawn, {.v = light_down}},
     {MODKEY | Mod1Mask, XK_Return, spawn, {.v = yazi}},
     {MODKEY | Mod1Mask, XK_m, spawn, {.v = spotify}},
-    {MODKEY | ControlMask, XK_p, spawn,
+    {ControlMask | Mod1Mask, XK_p, spawn,
      SHCMD(
          "rofi -show power-menu -theme-str 'window {width: 16em; height: "
          "18em;} listview {lines: 6;}' -modi "
