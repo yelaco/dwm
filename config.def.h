@@ -47,6 +47,7 @@ static const Rule rules[] = {
     {"Gimp", NULL, NULL, 0, 1, -1},
     {"zen-beta", NULL, NULL, 0, 0, -1},
     {"Spotify", "spotify", NULL, 1 << 3, 0, -1},
+    {"zenity", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
@@ -59,11 +60,13 @@ static const int lockfullscreen =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[@]", spiral},                  /* first entry is default */
-    {"=[]", tile},                    // left stack
-    {"[\\]", dwindle}, {"[]=", tile}, /* righ stack */
+    {"[@]", spiral},   /* first entry is default */
+    {"[]=", tile},     /* righ stack */
+    {"=[]", tileleft}, /* left stack */
+    {"[\\]", dwindle},
     {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle},  {NULL, NULL},
+    {"[M]", monocle},
+    {NULL, NULL},
 };
 
 /* key definitions */
